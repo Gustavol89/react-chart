@@ -2,6 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Hi I'm Gustavo and this is my project using react to the development of a chart with the actions of a company I have some warnings I mean so do not reload often
+the page because if you do this the chart will stop working for some reason or bug that I could not solve if the chart stop working probably you can use npm run build to build the project one more time
+
 ## Available Scripts
 
 In the project directory, you can run:
