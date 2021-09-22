@@ -1,14 +1,11 @@
 import React from 'react';
 import Plot from 'react-plotly.js';
 
-//CRIANDO CLASSE PARA IMPLEMENTAR O GRAFICO
-
 class Chart extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            stockChartXValues: [], //CRIANDO UM ARRAY PARA ATRIBUIR OS VALORES X E Y DO GRAFICO
-            stockChartYValues: []
+            stockChartXValues: [],             stockChartYValues: []
         }
     }
 
@@ -16,13 +13,12 @@ class Chart extends React.Component {
         this.fetchStock();
     }
 
-    //EU ESTAVA TENDO ALGUMAS DIFICULDADES PARA IMPLEMENTAR A IEX CLOUD API ENTÃO ESTOU USANDO A ALPHA VANTAGE 
-
     fetchStock() {
         const pointertothis = this;
-        const API_KEY = 'AYGKGOSQ68OJ9LJU';
-        let API_Call = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=NVDA&outputsize=full&apikey=${API_KEY}`
-        let stockChartXValuesFunction = []; //CRIANDO UMA FUNÇÃO PARA RECEBER OS VALORES DA API NO GRAFICO X E Y
+        const API_KEY = ''; //IN HERE YOU CAN PUT YOUR TOKEN
+        let API_Call = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED
+        &symbol=NVDA&outputsize=full&apikey=${API_KEY}`
+        let stockChartXValuesFunction = []; 
         let stockChartYValuesFunction = [];
 
         fetch(API_Call)
@@ -48,9 +44,7 @@ class Chart extends React.Component {
             )
 
     }
-    //EU TENTEI AQUI FAZER UM GRAFICO MAIS BONITO TENTEI USAR POR EX: RECHARTS E GOOGLE CHARTS POREM NÃO DEU CERTO 
-    // ESSE REACT-PLOTY FOI O UNICO QUE EU CONSEGUI USAR
-
+   
     render() {
         return (
             <div>
